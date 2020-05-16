@@ -86,7 +86,6 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
             }
         }
             
-        
         podcastURLTextField.stringValue = ""
         
         getPodcasts()

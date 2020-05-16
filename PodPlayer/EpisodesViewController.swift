@@ -9,7 +9,7 @@
 import Cocoa
 
 class EpisodesViewController: NSViewController {
-
+    
     @IBOutlet weak var podcastTitleLabel: NSTextField!
     
     @IBOutlet weak var imageView: NSImageView!
@@ -41,6 +41,28 @@ class EpisodesViewController: NSViewController {
         
         pauseButton.isHidden = true
         
+        getEpisodes()
+        
+    }
+    
+    func getEpisodes() {
+        if podcast?.rssURL != nil {
+            
+            let url = URL(string: podcast!.rssURL!)!
+            
+            URLSession.shared.dataTask(with: url) {(data:Data?,response:URLResponse?,error:Error?) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    if data != nil {
+                        let parser = Parser()
+                        parser.getEpisodes(data: data!)
+                        
+                    }
+                }
+            }.resume()
+            
+        }
     }
     
     @IBAction func pauseButtonClicked(_ sender: Any) {
