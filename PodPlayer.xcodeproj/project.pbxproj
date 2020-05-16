@@ -70,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FACD902E2470A6FF00BBE15E /* Episode.swift */,
+				FACD902124701FA400BBE15E /* Parser.swift */,
 				FACD900C246FFA2A00BBE15E /* AppDelegate.swift */,
 				FACD902C24709F8200BBE15E /* TheSplitController.swift */,
 				FACD902A24709DB900BBE15E /* EpisodesViewController.swift */,
@@ -79,7 +80,6 @@
 				FACD9018246FFA2E00BBE15E /* Info.plist */,
 				FACD9019246FFA2E00BBE15E /* PodPlayer.entitlements */,
 				FACD9010246FFA2A00BBE15E /* PodPlayer.xcdatamodeld */,
-				FACD902124701FA400BBE15E /* Parser.swift */,
 				FACD90292470227600BBE15E /* SWXMLHash */,
 			);
 			path = PodPlayer;

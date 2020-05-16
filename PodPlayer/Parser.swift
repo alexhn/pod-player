@@ -16,6 +16,8 @@ class Parser {
         
         let xml = SWXMLHash.parse(data)
         
+        var ret : [Episode] = [];
+        
         for item in xml["rss"]["channel"]["item"].all {
             let episode = Episode()
             if let title = item["title"].element?.text {
@@ -27,9 +29,19 @@ class Parser {
             if let audioURL = item["link"].element?.text {
                 episode.audioURL = audioURL
             }
+            if let pubDate = item["pubDate"].element?.text {
+                print("pub date: \(pubDate)")
+                if let date = Episode.formatter().date(from: pubDate) {
+                    print("formatted date: \(date)")
+                    episode.pubDate = date
+                }
+            }
+            ret.append(episode)
+            print(episode.pubDate)
         }
         
-        return []
+        return ret
     }
+    
     
 }

@@ -15,4 +15,11 @@ class Episode {
     var htmlDescription = ""
     var audioURL = ""
     
+    static func formatter() -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "E, d MMM yyyy HH:mm:ss zzz"
+        return formatter
+    }
+    
 }

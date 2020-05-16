@@ -56,8 +56,8 @@ class EpisodesViewController: NSViewController {
                 } else {
                     if data != nil {
                         let parser = Parser()
-                        parser.getEpisodes(data: data!)
-                        
+                        let episodes = parser.getEpisodes(data: data!)
+                        print(episodes)
                     }
                 }
             }.resume()
