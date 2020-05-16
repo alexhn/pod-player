@@ -8,21 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		FACD900D246FFA2A00BBE15E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD900C246FFA2A00BBE15E /* AppDelegate.swift */; };
-		FACD900F246FFA2A00BBE15E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD900E246FFA2A00BBE15E /* ViewController.swift */; };
 		FACD9012246FFA2A00BBE15E /* PodPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD9010246FFA2A00BBE15E /* PodPlayer.xcdatamodeld */; };
 		FACD9014246FFA2E00BBE15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD9013246FFA2E00BBE15E /* Assets.xcassets */; };
 		FACD9017246FFA2E00BBE15E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACD9015246FFA2E00BBE15E /* Main.storyboard */; };
+		FACD902024701A3C00BBE15E /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD901F24701A3C00BBE15E /* PodcastsViewController.swift */; };
+		FACD902224701FA400BBE15E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902124701FA400BBE15E /* Parser.swift */; };
+		FACD90262470226400BBE15E /* shim.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD90232470226400BBE15E /* shim.swift */; };
+		FACD90272470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD90242470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift */; };
+		FACD90282470226400BBE15E /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD90252470226400BBE15E /* SWXMLHash.swift */; };
+		FACD902B24709DB900BBE15E /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902A24709DB900BBE15E /* EpisodesViewController.swift */; };
+		FACD902D24709F8200BBE15E /* TheSplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902C24709F8200BBE15E /* TheSplitController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FACD9009246FFA2A00BBE15E /* PodPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD900C246FFA2A00BBE15E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FACD900E246FFA2A00BBE15E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACD9011246FFA2A00BBE15E /* PodPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PodPlayer.xcdatamodel; sourceTree = "<group>"; };
 		FACD9013246FFA2E00BBE15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACD9016246FFA2E00BBE15E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACD9018246FFA2E00BBE15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD9019246FFA2E00BBE15E /* PodPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PodPlayer.entitlements; sourceTree = "<group>"; };
+		FACD901F24701A3C00BBE15E /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
+		FACD902124701FA400BBE15E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		FACD90232470226400BBE15E /* shim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shim.swift; sourceTree = "<group>"; };
+		FACD90242470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
+		FACD90252470226400BBE15E /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		FACD902A24709DB900BBE15E /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		FACD902C24709F8200BBE15E /* TheSplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSplitController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +68,28 @@
 			isa = PBXGroup;
 			children = (
 				FACD900C246FFA2A00BBE15E /* AppDelegate.swift */,
-				FACD900E246FFA2A00BBE15E /* ViewController.swift */,
+				FACD902C24709F8200BBE15E /* TheSplitController.swift */,
+				FACD902A24709DB900BBE15E /* EpisodesViewController.swift */,
+				FACD901F24701A3C00BBE15E /* PodcastsViewController.swift */,
 				FACD9013246FFA2E00BBE15E /* Assets.xcassets */,
 				FACD9015246FFA2E00BBE15E /* Main.storyboard */,
 				FACD9018246FFA2E00BBE15E /* Info.plist */,
 				FACD9019246FFA2E00BBE15E /* PodPlayer.entitlements */,
 				FACD9010246FFA2A00BBE15E /* PodPlayer.xcdatamodeld */,
+				FACD902124701FA400BBE15E /* Parser.swift */,
+				FACD90292470227600BBE15E /* SWXMLHash */,
 			);
 			path = PodPlayer;
+			sourceTree = "<group>";
+		};
+		FACD90292470227600BBE15E /* SWXMLHash */ = {
+			isa = PBXGroup;
+			children = (
+				FACD90232470226400BBE15E /* shim.swift */,
+				FACD90252470226400BBE15E /* SWXMLHash.swift */,
+				FACD90242470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift */,
+			);
+			path = SWXMLHash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACD900F246FFA2A00BBE15E /* ViewController.swift in Sources */,
+				FACD90262470226400BBE15E /* shim.swift in Sources */,
+				FACD90272470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */,
+				FACD902B24709DB900BBE15E /* EpisodesViewController.swift in Sources */,
+				FACD90282470226400BBE15E /* SWXMLHash.swift in Sources */,
+				FACD902224701FA400BBE15E /* Parser.swift in Sources */,
+				FACD902D24709F8200BBE15E /* TheSplitController.swift in Sources */,
 				FACD900D246FFA2A00BBE15E /* AppDelegate.swift in Sources */,
+				FACD902024701A3C00BBE15E /* PodcastsViewController.swift in Sources */,
 				FACD9012246FFA2A00BBE15E /* PodPlayer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
