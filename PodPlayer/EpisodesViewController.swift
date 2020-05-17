@@ -103,6 +103,7 @@ class EpisodesViewController: NSViewController, NSTableViewDelegate, NSTableView
     func tableViewSelectionDidChange(_ notification: Notification) {
         if tableView.selectedRow >= 0 {
             let episode = episodes[tableView.selectedRow]
+            print(episode.audioURL)
             if let url = URL(string: episode.audioURL) {
                 player = AVPlayer(url: url)
                 player?.play()
