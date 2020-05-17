@@ -19,6 +19,7 @@
 		FACD902B24709DB900BBE15E /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902A24709DB900BBE15E /* EpisodesViewController.swift */; };
 		FACD902D24709F8200BBE15E /* TheSplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902C24709F8200BBE15E /* TheSplitController.swift */; };
 		FACD902F2470A6FF00BBE15E /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD902E2470A6FF00BBE15E /* Episode.swift */; };
+		FACD90312471444000BBE15E /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD90302471444000BBE15E /* EpisodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FACD902A24709DB900BBE15E /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		FACD902C24709F8200BBE15E /* TheSplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSplitController.swift; sourceTree = "<group>"; };
 		FACD902E2470A6FF00BBE15E /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		FACD90302471444000BBE15E /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				FACD902E2470A6FF00BBE15E /* Episode.swift */,
+				FACD90302471444000BBE15E /* EpisodeCell.swift */,
 				FACD902124701FA400BBE15E /* Parser.swift */,
 				FACD900C246FFA2A00BBE15E /* AppDelegate.swift */,
 				FACD902C24709F8200BBE15E /* TheSplitController.swift */,
@@ -168,6 +171,7 @@
 				FACD90262470226400BBE15E /* shim.swift in Sources */,
 				FACD90272470226400BBE15E /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */,
 				FACD902B24709DB900BBE15E /* EpisodesViewController.swift in Sources */,
+				FACD90312471444000BBE15E /* EpisodeCell.swift in Sources */,
 				FACD902F2470A6FF00BBE15E /* Episode.swift in Sources */,
 				FACD90282470226400BBE15E /* SWXMLHash.swift in Sources */,
 				FACD902224701FA400BBE15E /* Parser.swift in Sources */,

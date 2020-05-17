@@ -74,7 +74,13 @@ class EpisodesViewController: NSViewController, NSTableViewDelegate, NSTableView
     }
     
     @IBAction func pauseButtonClicked(_ sender: Any) {
-        
+        if pauseButton.title == "Pause" {
+            player?.pause()
+            pauseButton.title = "Play"
+        } else {
+            player?.play()
+            pauseButton.title = "Pause"
+        }
     }
     
     @IBAction func deleteButtonClicked(_ sender: Any) {
@@ -84,7 +90,6 @@ class EpisodesViewController: NSViewController, NSTableViewDelegate, NSTableView
                 (NSApplication.shared.delegate as? AppDelegate)?.saveAction(nil)
                 podcastsViewController?.getPodcasts()
                 podcast = nil
-                
                 updateView()
             }
         }
@@ -107,7 +112,10 @@ class EpisodesViewController: NSViewController, NSTableViewDelegate, NSTableView
             if let url = URL(string: episode.audioURL) {
                 player = AVPlayer(url: url)
                 player?.play()
+                
             }
+            pauseButton.isHidden = false
+            pauseButton.title = "Pause"
         }
     }
     

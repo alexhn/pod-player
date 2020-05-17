@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -897,13 +898,13 @@
                                     <action selector="pauseButtonClicked:" target="rcF-Vg-HHX" id="goC-wd-fZ4"/>
                                 </connections>
                             </button>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrR-nU-HzA">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="65" horizontalPageScroll="10" verticalLineScroll="65" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrR-nU-HzA">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="170"/>
-                                <clipView key="contentView" id="Yjz-92-nh6">
+                                <clipView key="contentView" ambiguous="YES" id="Yjz-92-nh6">
                                     <rect key="frame" x="1" y="0.0" width="448" height="169"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="vse-SX-SiY" viewBased="YES" id="rA0-uR-uOH">
+                                        <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="63" rowSizeStyle="automatic" headerView="vse-SX-SiY" viewBased="YES" id="rA0-uR-uOH">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="144"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -922,22 +923,53 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="episodeCell" id="rzK-lb-i1c">
-                                                            <rect key="frame" x="1" y="1" width="447" height="17"/>
+                                                        <tableCellView identifier="episodeCell" id="rzK-lb-i1c" customClass="EpisodeCell">
+                                                            <rect key="frame" x="1" y="1" width="447" height="63"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hs1-LI-yLk">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="447" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="5Xe-Oh-0mi">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ouC-tq-jw8">
+                                                                    <rect key="frame" x="1" y="40" width="355" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="UwG-2H-xOC"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="6v8-wK-N3e">
+                                                                        <font key="font" metaFont="systemBold" size="15"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m8c-pf-wIK">
+                                                                    <rect key="frame" x="392" y="40" width="54" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="Dz8-fy-ZMS"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="Zso-6g-QAP"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="Yxz-Gc-J6h">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <wkWebView wantsLayer="YES" id="bBD-S0-leN">
+                                                                    <rect key="frame" x="-4" y="3" width="451" height="37"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <wkWebViewConfiguration key="configuration">
+                                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                                        <wkPreferences key="preferences"/>
+                                                                    </wkWebViewConfiguration>
+                                                                </wkWebView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="ouC-tq-jw8" firstAttribute="leading" secondItem="rzK-lb-i1c" secondAttribute="leading" constant="3" id="5Fg-Zm-52e"/>
+                                                                <constraint firstItem="m8c-pf-wIK" firstAttribute="leading" secondItem="ouC-tq-jw8" secondAttribute="trailing" constant="40" id="FaO-ov-pfX"/>
+                                                                <constraint firstItem="ouC-tq-jw8" firstAttribute="top" secondItem="rzK-lb-i1c" secondAttribute="top" constant="3" id="hYT-2i-58C"/>
+                                                                <constraint firstAttribute="trailing" secondItem="m8c-pf-wIK" secondAttribute="trailing" constant="3" id="rW9-R8-7oV"/>
+                                                                <constraint firstItem="m8c-pf-wIK" firstAttribute="top" secondItem="rzK-lb-i1c" secondAttribute="top" constant="3" id="uNz-rQ-Gdr"/>
+                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="hs1-LI-yLk" id="O69-Ut-Gsx"/>
+                                                                <outlet property="dateLabel" destination="m8c-pf-wIK" id="y73-ZD-bd1"/>
+                                                                <outlet property="descriptionWebView" destination="bBD-S0-leN" id="DwL-Gu-UON"/>
+                                                                <outlet property="titleLabel" destination="ouC-tq-jw8" id="nWJ-2C-ti5"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -957,7 +989,7 @@
                                     <rect key="frame" x="1" y="153" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="4jH-JW-ayQ">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="4jH-JW-ayQ">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
